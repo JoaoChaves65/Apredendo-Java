@@ -4,22 +4,14 @@ import javax.swing.JOptionPane;
 public class Principal {
 
     public static void main(String[] args) {
-
-        Carro carro = new Carro();
-        carro.cor = "Preto";
-        carro.modelo = "Fiat";
-        carro.desligar();
-
-        Carro carro1 = new Carro();
         
-        Carro carro2 = new Carro("Vermelho", "Chevrolet", "Flex");
+        Motorista m = new Motorista();
+        m.setCpf("100200300-40");
+        m.setNome("Pedro");
+        m.setTelefone("86 99999-8888");
         
-        
-        System.out.println(carro.resultado());
-        System.out.println(carro1.resultado());
-        System.out.println(carro2.resultado());
-        
-        
-        
+        JOptionPane.showMessageDialog(null, "Nome: " + m.getNome());
+        JOptionPane.showMessageDialog(null, "CPF: " + m.getCpf());
+        JOptionPane.showMessageDialog(null, "Telefone: " + m.getTelefone());
     }
 }
