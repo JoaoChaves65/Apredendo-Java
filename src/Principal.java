@@ -10,8 +10,7 @@ public class Principal {
         m.setNome("Pedro");
         m.setTelefone("86 99999-8888");
         
-        JOptionPane.showMessageDialog(null, "Nome: " + m.getNome());
-        JOptionPane.showMessageDialog(null, "CPF: " + m.getCpf());
-        JOptionPane.showMessageDialog(null, "Telefone: " + m.getTelefone());
+        JOptionPane.showMessageDialog(null, "Nome: " + m);
+
     }
 }

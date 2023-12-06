@@ -34,4 +34,11 @@ public class Motorista {
     public String getTelefone() {
         return telefone;
     }
+
+    @Override
+    public String toString() {
+        return "Motorista{" + "nome=" + nome + ", cpf=" + cpf + ", telefone=" + telefone + '}';
+    }
+    
+    
 }
