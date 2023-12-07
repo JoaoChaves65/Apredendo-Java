@@ -12,9 +12,15 @@ public class Principal {
 
         Motorista m2 = new Motorista();
         m2.setCpf("100200300-40");
-        m2.setNome("Pedro");
+        m2.setNome("Maria");
         m2.setTelefone("86 99999-8888");
-        
+
         System.out.println(m.equals(m2));
+
+        if (m.equals(m2)) {
+            JOptionPane.showMessageDialog(null, "Os objetos são iguais");
+        } else {
+            JOptionPane.showMessageDialog(null, "Os objetos são diferentes");
+        }
     }
 }

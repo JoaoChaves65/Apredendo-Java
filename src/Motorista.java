@@ -1,4 +1,7 @@
 
+import java.util.Objects;
+
+
 public class Motorista {
 
     //Atributos
@@ -38,6 +41,36 @@ public class Motorista {
     @Override
     public String toString() {
         return "Motorista{" + "nome=" + nome + ", cpf=" + cpf + ", telefone=" + telefone + '}';
+    }
+
+    @Override
+    public int hashCode() {
+        int hash = 5;
+        hash = 97 * hash + Objects.hashCode(this.nome);
+        hash = 97 * hash + Objects.hashCode(this.cpf);
+        hash = 97 * hash + Objects.hashCode(this.telefone);
+        return hash;
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (this == obj) {
+            return true;
+        }
+        if (obj == null) {
+            return false;
+        }
+        if (getClass() != obj.getClass()) {
+            return false;
+        }
+        final Motorista other = (Motorista) obj;
+        if (!Objects.equals(this.nome, other.nome)) {
+            return false;
+        }
+        if (!Objects.equals(this.cpf, other.cpf)) {
+            return false;
+        }
+        return Objects.equals(this.telefone, other.telefone);
     }
     
     
