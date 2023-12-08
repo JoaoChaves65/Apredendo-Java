@@ -1,6 +1,5 @@
 package modelo;
 
-
 import javax.swing.JOptionPane;
 
 public class Carro {
@@ -12,6 +11,7 @@ public class Carro {
     public double valor;
     public int velocidade;
     public int posicaoMarcha;
+    private Motorista motorista;
 
     public Carro() {
         cor = "Amerelo";
@@ -26,6 +26,69 @@ public class Carro {
     }
 
     //Métodos
+    public String getCor() {
+        return cor;
+    }
+
+    public void setCor(String cor) {
+        this.cor = cor;
+    }
+
+    public String getModelo() {
+        return modelo;
+    }
+
+    public void setModelo(String modelo) {
+        this.modelo = modelo;
+    }
+
+    public String getTipoCombustivel() {
+        return tipoCombustivel;
+    }
+
+    public void setTipoCombustivel(String tipoCombustivel) {
+        this.tipoCombustivel = tipoCombustivel;
+    }
+
+    public double getValor() {
+        return valor;
+    }
+
+    public void setValor(double valor) {
+        this.valor = valor;
+    }
+
+    public int getVelocidade() {
+        return velocidade;
+    }
+
+    public void setVelocidade(int velocidade) {
+        this.velocidade = velocidade;
+    }
+
+    public int getPosicaoMarcha() {
+        return posicaoMarcha;
+    }
+
+    public void setPosicaoMarcha(int posicaoMarcha) {
+        this.posicaoMarcha = posicaoMarcha;
+    }
+
+    public Motorista getMotorista() {
+        return motorista;
+    }
+
+    public void setMotorista(Motorista motorista) {
+        this.motorista = motorista;
+    }
+
+    @Override
+    public String toString() {
+        return "Carro{" + "cor=" + cor + ", modelo=" + modelo + ", tipoCombustivel=" + tipoCombustivel + ", valor=" + valor + ", velocidade=" + velocidade + ", posicaoMarcha=" + posicaoMarcha + ", motorista=" + motorista + '}';
+    }
+
+    
+    
     public void ligar() {
         JOptionPane.showMessageDialog(null, "O carro está ligado");
         velocidade = 0;
