@@ -1,4 +1,7 @@
+package visao;
 
+
+import modelo.Motorista;
 import javax.swing.JOptionPane;
 
 public class Principal {
